@@ -1,5 +1,13 @@
 <script setup>
+import { defineProps } from "vue";
 import logo from "@/assets/img/logo.png";
+
+defineProps({
+  items: {
+    type: Array,
+    required: true,
+  },
+});
 </script>
 
 <template>
@@ -19,20 +27,18 @@ import logo from "@/assets/img/logo.png";
           <div class="md:ml-auto">
             <div class="flex space-x-2">
               <a
-                href="index.html"
-                class="text-white bg-green-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-                >Home</a
+                v-for="(item, index) in items"
+                :key="index"
+                :href="item.href"
+                :class="[
+                  'text-white rounded-md px-3 py-2',
+                  item.active
+                    ? 'bg-green-900 shadow-md'
+                    : 'hover:bg-green-900 hover:text-white',
+                ]"
               >
-              <a
-                href="jobs.html"
-                class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
-                >Jobs</a
-              >
-              <a
-                href="add-job.html"
-                class="text-white hover:bg-green-900 hover:text-white rounded-md px-3 py-2"
-                >Add Job</a
-              >
+                {{ item.label }}
+              </a>
             </div>
           </div>
         </div>
