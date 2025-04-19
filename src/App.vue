@@ -2,21 +2,14 @@
 import Navbar from "@/components/Navbar.vue";
 import Hero from "@/components/Hero.vue";
 import HomeCards from "@/components/HomeCards.vue";
-
-const navbarItems = [
-  { label: "Home", href: "index.html", active: true },
-  { label: "Jobs", href: "jobs.html", active: false },
-  { label: "Add Job", href: "add-job.html", active: false },
-];
+import { navbarItems } from "@/data/navbarItems.js";
 </script>
 
 <template>
-  <Navbar :items = "navbarItems"/>
+  <Navbar :items="navbarItems" />
   <Hero
     title="Become A Vue Dev"
     subtitle="Find the Vue job that fits your skills and needs"
   />
   <HomeCards />
 </template>
-
-<style scoped></style>
