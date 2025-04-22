@@ -1,5 +1,5 @@
 export const navbarItems = [
-  { label: "Home", href: "index.html", active: true },
-  { label: "Jobs", href: "jobs.html", active: false },
-  { label: "Add Job", href: "add-job.html", active: false },
+  { label: "Home", href: "/", active: true },
+  { label: "Jobs", href: "/jobs", active: false },
+  { label: "Add Job", href: "/jobs/add", active: false },
 ];
