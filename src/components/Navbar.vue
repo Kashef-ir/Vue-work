@@ -1,7 +1,13 @@
 <script setup>
 import { defineProps } from "vue";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 import logo from "@/assets/img/logo.png";
+
+const route = useRoute();
+
+const isActiveLink = (href) => {
+  return route.path === href;
+};
 
 defineProps({
   items: {
@@ -27,19 +33,19 @@ defineProps({
           </RouterLink>
           <div class="md:ml-auto">
             <div class="flex space-x-2">
-              <a
+              <RouterLink
                 v-for="(item, index) in items"
                 :key="index"
-                :href="item.href"
+                :to="item.href"
                 :class="[
                   'text-white rounded-md px-3 py-2',
-                  item.active
+                  isActiveLink(item.href)
                     ? 'bg-green-900 shadow-md'
                     : 'hover:bg-green-900 hover:text-white',
                 ]"
               >
                 {{ item.label }}
-              </a>
+              </RouterLink>
             </div>
           </div>
         </div>
