@@ -2,6 +2,7 @@
 import JobListing from "./JobListing.vue";
 import { reactive, defineProps, onMounted } from "vue";
 import axios from "axios";
+import PulseLoader from "vue-spinner/src/PulseLoader.vue"
 
 defineProps({
   limit: Number,
@@ -23,7 +24,7 @@ onMounted(async () => {
   } catch (error) {
     console.error("Error fetching jobs", error)
   } finally {
-    stats.isLoading = false
+    state.isLoading = false
   }
 })
 
@@ -35,7 +36,12 @@ onMounted(async () => {
       <h2 class="text-3xl font-bold text-green-500 mb-6 text-center">
         Browse Jobs
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Show spinner Loading while loading is true -->
+      <div v-if="state.isLoading" class="text-center text-gray-500 py-6">
+        <PulseLoader />
+      </div>
+      <!-- Show job listing while the loading is false -->
+      <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <JobListing
           v-for="job in state.jobs.slice(0, limit || jobs.length)"
           :key="job.id"
