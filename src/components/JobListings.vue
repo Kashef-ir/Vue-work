@@ -11,7 +11,7 @@ defineProps({
   }
 });
 
-const jobs = ref(jobsData);
+const jobs = ref(jobsData.jobs);
 </script>
 
 <template>
