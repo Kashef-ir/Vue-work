@@ -1,29 +1,24 @@
-# Vue-Work
+# Vue Work Project
 
-This template should help get you started developing with Vue 3 in Vite.
+## 📄 Description
 
-## Recommended IDE Setup
+This project is built using **Vue.js**, **Tailwind CSS**, and **JSON Server**.  
+Below is a preview of the main page:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![Main Page Preview](image.png)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 📥 Download Instructions
 
-## Project Setup
+You can get the project in two ways:
 
-```sh
-npm install
-```
+### 1. Download as ZIP  
+Go to the GitHub repository, click the **Code** button, and select **Download ZIP**:  
+👉 [https://github.com/kashef-ir/vue-work](https://github.com/kashef-ir/vue-work)
 
-### Compile and Hot-Reload for Development
+### 2. Clone via Git  
+Use the following command in your terminal:
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+```bash
+git clone https://github.com/Kashef-ir/Vue-work.git
