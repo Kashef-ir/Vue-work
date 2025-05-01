@@ -22,3 +22,25 @@ Use the following command in your terminal:
 
 ```bash
 git clone https://github.com/Kashef-ir/Vue-work.git
+```
+
+### 🚀 How to Run the Project
+#### 1. Start the Vue Development Server
+
+Run the following command inside the project directory:
+```bash
+npm run dev
+```
+You should see a local server URL (e.g., http://localhost:5173) in the terminal.
+#### 2. Start the JSON Server
+
+To render job data from the JSON Server, run:
+```bash
+npm run server
+```
+
+### ✅ Requirements
+
+Node.js and npm installed
+
+Internet connection for installing dependencies
